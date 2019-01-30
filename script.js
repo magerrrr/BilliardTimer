@@ -1,10 +1,36 @@
-var tarif = 10 //тариф за час игры
-
-sum = 20 // вводим сумму
-totalSum = sum - (sum * 15/100) //сумма со скидкой
-
-HoursForGame = Sum/tarif
-TimeInMinuts = HoursForGame*60// подсчет времени согласно сумме
+var tarifPerHour = 10;
+var startPlayingTime;
+var currentTime;
 
 
-Время: TimeInMinuts c отсчетом
+function resetStartTime() {
+	startPlayingTime = new Date();
+	return startPlayingTime.getTime();
+}
+
+function getCurrentTime(){
+	currentTime = new Date();
+	return currentTime.getTime();
+}
+
+function getTime(){
+	var a = getCurrentTime() - startPlayingTime;
+	return a;
+	//document.getElementById("demo").InnerHTML =;
+}
+
+function getMoney(){
+	var m = getTime()/3600000*tarifPerHour;
+	return m;
+}
+
+
+
+
+
+
+
+
+
+
+
