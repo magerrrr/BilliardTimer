@@ -5,11 +5,16 @@
 	<title>timer</title>
 </head>
 <body>
-Тариф: <input type="text" name="tarif" value="10" /> BYN/час
-<button onclick="resetStartTime()">Start</button>
-<button onclick="getTime()">ShowTime</button>
+Тариф: <input type="text" name="tarif" value="10" /> BYN/час <br>
+<input type="button" id="btn" value="Сохранить тариф">
 
-<p id="demo"></p>
+
+<button onclick="resetStartTime()">Начать</button>
+<button onclick="getMoney()">ShowTime</button>
+
+<p>Стоимость игры за столом составляет: <div id="result"></div></p>
+
+
 
 
 	

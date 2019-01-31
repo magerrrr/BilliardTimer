@@ -16,17 +16,13 @@ function getCurrentTime(){
 function getTime(){
 	var a = getCurrentTime() - startPlayingTime;
 	return a;
-	//document.getElementById("demo").InnerHTML =;
 }
 
 function getMoney(){
-	var m = getTime()/3600000*tarifPerHour;
-	return m;
+	var price = getTime()/3600000*tarifPerHour;
+	document.getElementById('result').innerHTML = price.toFixed(2);
+	return price;
 }
-
-
-
-
 
 
 
