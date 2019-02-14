@@ -1,8 +1,7 @@
 var tarifPerHour = 10;
 var startPlayingTime;
 var currentTime;
-var timerId = setInterval(getMoney,1000)
-
+var timerId = setInterval(getMoney,1000);
 
 function resetStartTime() {
 	startPlayingTime = new Date();
@@ -21,8 +20,9 @@ function getTime(){
 
 function getMoney(){
 	var price = getTime()/3600000*tarifPerHour;
-	document.getElementById('result').innerHTML = price.toFixed(2);
-	return price;
+	rub = Math.floor(price);
+	cop = (price - rub)*100;
+	document.getElementById('result').innerHTML = rub + " Руб. " + cop.toFixed(0) + " Коп.";
 }
 
 function stopTime(){
