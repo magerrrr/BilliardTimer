@@ -1,6 +1,7 @@
 var tarifPerHour = 10;
 var startPlayingTime;
 var currentTime;
+var timerId = setInterval(getMoney,1000)
 
 
 function resetStartTime() {
@@ -24,9 +25,8 @@ function getMoney(){
 	return price;
 }
 
-
-
-
-
-
-
+function stopTime(){
+	var price = getTime()/3600000*tarifPerHour;
+	document.getElementById('result').innerHTML = "К оплате: " + price.toFixed(2) + " руб";
+	clearInterval(timerId);
+}
