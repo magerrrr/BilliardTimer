@@ -1,9 +1,19 @@
-var tarifPerHour = 10;
+var tarifPerHour = prompt("Введите тариф в час", 1000); // 10
+var discount = prompt("Введите скидку", 15); //15
+var pricePerHour = calculateDiscount(tarifPerHour, discount);
 var startPlayingTime;
 var currentTime;
-var timerId = setInterval(getMoney,1000);
+var timerId;
+var price;
+var isButtonStop = false;
 
-function resetStartTime() {
+function calculateDiscount(tarif, disc){ //10,15
+return tarif - (tarif*disc/100); // return 8.5
+}
+
+function resetStartTime() { // НАЧАТЬ ИГРУ
+	timerId = setInterval(getMoney,1); // счетчик
+	isButtonStop = false;
 	startPlayingTime = new Date();
 	return startPlayingTime.getTime();
 }
@@ -19,14 +29,19 @@ function getTime(){
 }
 
 function getMoney(){
-	var price = getTime()/3600000*tarifPerHour;
+	var price = getTime()/3600000*pricePerHour;
 	rub = Math.floor(price);
 	cop = (price - rub)*100;
 	document.getElementById('result').innerHTML = rub + " Руб. " + cop.toFixed(0) + " Коп.";
 }
 
 function stopTime(){
-	var price = getTime()/3600000*tarifPerHour;
-	document.getElementById('result').innerHTML = "К оплате: " + price.toFixed(2) + " руб";
-	clearInterval(timerId);
+	if(!isButtonStop){
+		isButtonStop = true;
+		price = getTime()/3600000*pricePerHour;
+		document.getElementById('result').innerHTML = "К оплате: " + price.toFixed(2) + " руб";
+		clearInterval(timerId); // сброс счетчика
+	} else {
+		document.getElementById('result').innerHTML = "К оплате: " + price.toFixed(2) + " руб";
+	}
 }
