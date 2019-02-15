@@ -1,5 +1,5 @@
-var tarifPerHour = prompt("Введите тариф в час", 1000); // 10
-var discount = prompt("Введите скидку", 15); //15
+var tarifPerHour = prompt("Введите тариф в час", 10);
+var discount = prompt("Введите скидку", 15);
 var pricePerHour = calculateDiscount(tarifPerHour, discount);
 var startPlayingTime;
 var currentTime;
@@ -7,8 +7,8 @@ var timerId;
 var price;
 var isButtonStop = false;
 
-function calculateDiscount(tarif, disc){ //10,15
-return tarif - (tarif*disc/100); // return 8.5
+function calculateDiscount(tarif, disc){
+return tarif - (tarif*disc/100);
 }
 
 function resetStartTime() { // НАЧАТЬ ИГРУ

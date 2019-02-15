@@ -2,12 +2,22 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<link href="style.css" rel="stylesheet">
 	<title>Billiard Timer</title>
 </head>
 <body>
-	<button onclick="resetStartTime()">Начать игру</button>
-	<button onclick="stopTime()">Закончить</button>
-	<div id="result"></div>
+<div class="parent">
+	<div class="block1">
+		<center>		
+		<button onclick="resetStartTime()">Начать игру</button>
+		<button onclick="stopTime()">Закончить</button>
+		</center>
+			<center>
+				<div class="block2" id="result">
+				</div>
+			</center>	
+	</div>
+</div>
 	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>

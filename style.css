@@ -1,0 +1,40 @@
+body{
+	background-color: #9c9; 
+}
+.parent {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: auto;
+}
+
+.block1 { 
+	width: 200px;
+    height: 100px; 
+    background: #060;
+    padding: 5px; 
+    border: solid 3px black; 
+    float: left;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+.block2 {
+	width: 160px;
+    height: 20px;
+    padding: 5px;
+    background: #FFF; 
+    border: solid 1px black; 
+    float: left;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
