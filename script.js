@@ -1,4 +1,5 @@
 //TO DO: Set tarifPerHour depending on the day of the week
+//TO DO: add div with start-time drom variable startPlayingTime
 
 var tarifPerHour = prompt("Введите тариф в час", 10);
 var discount = prompt("Введите скидку", 15);
