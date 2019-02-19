@@ -38,6 +38,18 @@ body{
     left: 0;
     margin: auto;
 }
+.block3 {
+	width: 60px;
+    height: 15px;
+    padding: 5px;
+    background: #FFF; 
+    border: solid 1px black; 
+    float: left;
+    position: absolute;
+    top: 80px;
+    right: 70px;
+
+}
 h2{
 	text-align: center;
 }

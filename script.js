@@ -86,20 +86,15 @@ function getCurrentTarif(){
 }
 
 function displayPlayingTime(millisec) {
-        var seconds = (millisec / 1000).toFixed(0);
-        var minutes = Math.floor(seconds / 60);
-        var hours = "";
-        if (minutes > 59) {
-            hours = Math.floor(minutes / 60);
-            hours = (hours >= 10) ? hours : "0" + hours;
-            minutes = minutes - (hours * 60);
-            minutes = (minutes >= 10) ? minutes : "0" + minutes;
-        }
+        let totalSeconds = Math.floor(millisec/1000);
+		let hours = Math.floor(totalSeconds / 3600);
+		totalSeconds %= 3600;
+		let minutes = Math.floor(totalSeconds / 60);
+		let seconds = totalSeconds % 60;
 
-        seconds = Math.floor(seconds % 60);
-        seconds = (seconds >= 10) ? seconds : "0" + seconds;
-        if (hours != "") {
-            return hours + ":" + minutes + ":" + seconds;
-        }
-        document.getElementById('time').innerHTML = minutes + ":" + seconds;
+		// If you want strings with leading zeroes:
+		minutes = String(minutes).padStart(2, "0");
+		hours = String(hours).padStart(2, "0");
+		seconds = String(seconds).padStart(2, "0");
+        document.getElementById('time').innerHTML = hours + ":" + minutes + ":" + seconds;
     }
