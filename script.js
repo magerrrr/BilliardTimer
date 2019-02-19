@@ -1,3 +1,8 @@
+//TO DO: user can see a week day
+//TO DO: user can see tarif
+//TO DO: user can see discount
+//TO DO: flexible site
+
 var tarifPerHour;
 var discount = 15;
 var pricePerHour;
@@ -92,7 +97,6 @@ function displayPlayingTime(millisec) {
 		let minutes = Math.floor(totalSeconds / 60);
 		let seconds = totalSeconds % 60;
 
-		// If you want strings with leading zeroes:
 		minutes = String(minutes).padStart(2, "0");
 		hours = String(hours).padStart(2, "0");
 		seconds = String(seconds).padStart(2, "0");
