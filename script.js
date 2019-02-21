@@ -3,16 +3,16 @@
 //TO DO: user can see discount
 //TO DO: flexible site
 
-var tarifPerHour;
-var discount = 15;
-var pricePerHour;
-var startPlayingTime;
-var currentTime;
-var timerId;
-var timerTime;
-var price;
-var isButtonStop = false;
-var test;
+let tarifPerHour;
+let discount = 15;
+let pricePerHour;
+let startPlayingTime;
+let currentTime;
+let timerId;
+let timerTime;
+let price;
+let isButtonStop = false;
+let test;
 
 function calculateDiscount(tarif, disc){
 return tarif - (tarif*disc/100);
@@ -36,12 +36,12 @@ function getCurrentTime(){
 }
 
 function getTime(){
-	var a = getCurrentTime() - startPlayingTime;
+	let a = getCurrentTime() - startPlayingTime;
 	return a;
 }
 
 function getMoney(){
-	var price = getTime()/3600000*pricePerHour;
+	let price = getTime()/3600000*pricePerHour;
 	rub = Math.floor(price);
 	cop = (price - rub)*100;
 	document.getElementById('result').innerHTML = rub + " Руб. " + cop.toFixed(0) + " Коп.";
@@ -60,8 +60,8 @@ function stopTime(){
 }
 
 function getCurrentTarif(){
-	var currentDay = startPlayingTime.getDay();
-	var currentHourOfDay = startPlayingTime.getHours();
+	let currentDay = startPlayingTime.getDay();
+	let currentHourOfDay = startPlayingTime.getHours();
 
 	switch (currentDay) {
   		case 0: 
