@@ -12,10 +12,11 @@ body{
 
 .block1 { 
 	width: 200px;
-    height: 100px; 
+    height: 110px; 
     background: #060;
     padding: 5px; 
-    border: solid 3px black; 
+    border: solid 2px black; 
+    border-radius: 10px;
     float: left;
     position: absolute;
     top: 0;
@@ -29,7 +30,8 @@ body{
     height: 20px;
     padding: 5px;
     background: #FFF; 
-    border: solid 1px black; 
+    border: solid 1px black;
+    border-radius: 5px; 
     float: left;
     position: absolute;
     top: 0;
@@ -44,6 +46,7 @@ body{
     padding: 5px;
     background: #FFF; 
     border: solid 1px black; 
+    border-radius: 5px;
     float: left;
     position: absolute;
     top: 80px;
