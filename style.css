@@ -1,5 +1,8 @@
 body{
-	background-color: #9c9; 
+	font-family: Arial,Helvetica Neue,Helvetica,sans-serif;
+	-webkit-font-smoothing: antialiased;
+	background-color: white;
+    background-image: linear-gradient(to right, #007500, #9f9);
 }
 .parent {
     width: 100%;
@@ -11,11 +14,12 @@ body{
 }
 
 .block1 { 
-	width: 200px;
+	width: 350px;
     height: 110px; 
-    background: #060;
+     background-image: linear-gradient(to bottom right, #9f9, #093);
+    
     padding: 5px; 
-    border: solid 2px black; 
+    border: solid 1px black; 
     border-radius: 10px;
     float: left;
     position: absolute;
@@ -41,7 +45,7 @@ body{
     margin: auto;
 }
 .block3 {
-	width: 60px;
+	width: 120px;
     height: 15px;
     padding: 5px;
     background: #FFF; 
@@ -50,7 +54,7 @@ body{
     float: left;
     position: absolute;
     top: 80px;
-    right: 70px;
+    right: 112px;
 }
 h2{
 	text-align: center;
